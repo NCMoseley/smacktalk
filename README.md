@@ -1,3 +1,5 @@
+![example of auth screen](https://github.com/NCMoseley/smacktalk/blob/master/src/assets/example.png)
+
 # smacktalk
 
 > This is our world now
