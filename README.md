@@ -4,7 +4,7 @@
 
 > This is our world now
 
-This is a small project designed to showcase realtime firebase message delivery, and Oauth service for a .Vue App.
+A small project designed to showcase realtime firebase message delivery, and Oauth service for a .Vue App.
 
 ## Build Setup
 
