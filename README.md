@@ -40,3 +40,5 @@ https://medium.com/@kels_orien/building-a-pwa-chat-app-with-vue-js-and-firebase-
 firebase
 vuefire
 moment
+dotenv
+dotenv-webpack
