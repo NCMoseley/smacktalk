@@ -1,12 +1,12 @@
 import firebase from 'firebase'
 
 export const config = {
-  apiKey: 'AIzaSyBmhECcZ-lNlvmmix3E6IQUqAMLr6z5ptU',
-  authDomain: 'wired-cogency-206420.firebaseapp.com',
-  databaseURL: 'https://wired-cogency-206420.firebaseio.com',
-  projectId: 'wired-cogency-206420',
-  storageBucket: 'wired-cogency-206420.appspot.com',
-  messagingSenderId: '762304385080'
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  databaseURL: process.env.DATABASE_URL,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID
 }
 
 firebase.initializeApp(config)
