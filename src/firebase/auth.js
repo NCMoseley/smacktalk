@@ -34,7 +34,7 @@ export function facebookAuth () {
     )
 }
 
-export function gitHubAuth () {
+export function githubAuth () {
   const provider = new firebase.auth.GithubAuthProvider()
 
   return firebase

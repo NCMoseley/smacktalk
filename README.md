@@ -1,6 +1,6 @@
 # smacktalk
 
-> This is our world.
+> This is our world now
 
 ## Build Setup
 
@@ -27,6 +27,9 @@ npm test
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## References
+
+Thanks to:
+https://medium.com/@kels_orien/building-a-pwa-chat-app-with-vue-js-and-firebase-part-1-61ee3834460b
 
 ## Technology
 
