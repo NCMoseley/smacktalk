@@ -11,6 +11,7 @@ export const config = {
 
 firebase.initializeApp(config)
 
-var firebaseRef = firebase.database().ref()
+const firebaseRef = firebase.database().ref()
+export const chatRef = firebaseRef.child('chat')
+export const chatRef2 = firebaseRef.child('chat2')
 export default firebase
-export var chatRef = firebaseRef.child('chat')

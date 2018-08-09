@@ -10,7 +10,7 @@
           </ul>
           <ul class="nav__right">
             <a href='' @click="logOut()">signout</a>
-              <a href='' @click="switchWindow()">switch window</a>
+             <a href='' @click="switchWindow()">switch window</a>
           </ul>
         </div>
       </nav>
@@ -56,7 +56,7 @@
 <script>
 /*eslint-disable*/
 import firebase, {
-  chatRef
+  chatRef2
 } from '../firebase/index'
 import Vue from 'vue'
 import Vuefire from 'vuefire'
@@ -75,7 +75,7 @@ export default {
    
   firebase: {
     // can bind to either a direct Firebase reference or a query
-    anArray: chatRef,
+    anArray: chatRef2.limitToLast(5),
     
     // optionally provide the cancelCallback
     cancelCallback: function () {
@@ -94,12 +94,12 @@ export default {
       firebase.auth().signOut()
     },
     switchWindow() {
-      this.$router.push('/chat2')
+      this.$router.push('/chat')
     },
     addComment() {
       if (this.newComment !== '') {
         this.comment = this.newComment.trim();
-        chatRef.push({
+        chatRef2.push({
           message: this.comment,
           name: this.getUserName(),
           timestamp: moment().unix(),

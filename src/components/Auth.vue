@@ -7,6 +7,7 @@
          <img src="../assets/logo.png" alt="Vue.js PWA">
         </a>
           <ul class="nav__left">
+             <a href='' @click="chat()">chat</a>
           </ul>
           <ul class="nav__right">
             <a href=''>signup</a>
@@ -70,6 +71,9 @@ export default {
     },
     githubAuth() {
       githubAuth()
+    },
+    chat() {
+      this.$router.push('/chat')
     }
   }
 }

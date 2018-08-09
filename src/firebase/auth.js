@@ -4,7 +4,7 @@ export function googleAuth() {
   const provider = new firebase.auth.GoogleAuthProvider()
   return firebase
     .auth()
-    .signInWithPopup(provider)
+    .signInWithRedirect(provider)
     .then(
       result => {
         console.log('Auth worked!', result)
@@ -20,7 +20,7 @@ export function facebookAuth() {
   const provider = new firebase.auth.FacebookAuthProvider()
   return firebase
     .auth()
-    .signInWithPopup(provider)
+    .signInWithRedirect(provider)
     .then(result => {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const token = result.credential.accessToken
@@ -28,7 +28,7 @@ export function facebookAuth() {
       console.log('Auth worked!', result)
       this.$router.push('/chat')
     })
-    .catch(function(error) {
+    .catch(error => {
       // Handle Errors here.
       console.log('Unable to auth', error)
       // const errorCode = error.code
@@ -37,7 +37,6 @@ export function facebookAuth() {
       // const email = error.email
       // The firebase.auth.AuthCredential type that was used.
       // const credential = error.credential
-      // ...
     })
 }
 
@@ -45,7 +44,7 @@ export function githubAuth() {
   const provider = new firebase.auth.GithubAuthProvider()
   return firebase
     .auth()
-    .signInWithPopup(provider)
+    .signInWithRedirect(provider)
     .then(result => {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const token = result.credential.accessToken
@@ -53,7 +52,7 @@ export function githubAuth() {
       console.log('Auth worked!', result)
       this.$router.push('/chat')
     })
-    .catch(function(error) {
+    .catch(error => {
       // Handle Errors here.
       console.log('Unable to auth', error)
       // const errorCode = error.code
