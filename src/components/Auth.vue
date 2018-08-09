@@ -190,7 +190,7 @@ export default {
 .loginBtn--facebook {
   background-color: #4c69ba;
   background-image: linear-gradient(#4c69ba, #3b55a0);
-
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
   text-shadow: 0 -1px 0 #354c8c;
 }
 .loginBtn--facebook:before {
@@ -202,24 +202,20 @@ export default {
 .loginBtn--facebook:focus {
   background-color: #5b7bd5;
   background-image: linear-gradient(#5b7bd5, #4864b1);
+  box-shadow: 0 3px 8px rgba(117, 117, 117, 0.5);
 }
 /* GitHub */
 .loginBtn--GitHub {
-  background-color: #707070;
-  background-image: linear-gradient(
-    to top,
-    #5c646f,
-    #62676f,
-    #68696f,
-    #6c6d70,
-    #707070
-  );
+  background-color: #a3a3a3;
+  background-image: linear-gradient(#96989e, #5a5b5c);
   font-family: monospace;
   padding: 0 15px 0 15px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
 }
 .loginBtn--GitHub:hover,
 .loginBtn--GitHub:focus {
   background-color: #a3a3a3;
-  background-image: linear-gradient(#8c99aa, #a3a5aa);
+  background-image: linear-gradient(#aaacb3, #636364);
+  box-shadow: 0 3px 8px rgba(117, 117, 117, 0.5);
 }
 </style>
