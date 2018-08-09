@@ -169,6 +169,8 @@ export default {
   border-radius: 0.2em;
   font-size: 16px;
   color: #fff;
+  transition: all 400ms ease 0s;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
 }
 .loginBtn:before {
   content: '';
@@ -190,7 +192,7 @@ export default {
 .loginBtn--facebook {
   background-color: #4c69ba;
   background-image: linear-gradient(#4c69ba, #3b55a0);
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
+
   text-shadow: 0 -1px 0 #354c8c;
 }
 .loginBtn--facebook:before {
@@ -210,7 +212,6 @@ export default {
   background-image: linear-gradient(#96989e, #5a5b5c);
   font-family: monospace;
   padding: 0 15px 0 15px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
 }
 .loginBtn--GitHub:hover,
 .loginBtn--GitHub:focus {
