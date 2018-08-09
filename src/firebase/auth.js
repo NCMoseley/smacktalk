@@ -1,8 +1,7 @@
 import firebase from './index'
-
-export function googleAuth () {
+/* eslint-disable */
+export function googleAuth() {
   const provider = new firebase.auth.GoogleAuthProvider()
-  // const result = auth().signInWithPopup(provider);
   return firebase
     .auth()
     .signInWithPopup(provider)
@@ -17,55 +16,49 @@ export function googleAuth () {
     )
 }
 
-export function facebookAuth () {
+export function facebookAuth() {
   const provider = new firebase.auth.FacebookAuthProvider()
-  // const result = auth().signInWithPopup(provider);
   return firebase
     .auth()
     .signInWithPopup(provider)
-    .then(
-      result => {
-        console.log('Auth worked!', result)
-        this.$router.push('/chat')
-      },
-      error => {
-        console.log('Unable to auth', error)
-      }
-    )
+    .then(result => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const token = result.credential.accessToken
+      const user = result.user
+      console.log('Auth worked!', result)
+      this.$router.push('/chat')
+    })
+    .catch(function(error) {
+      // Handle Errors here.
+      console.log('Unable to auth', error)
+      // const errorCode = error.code
+      // const errorMessage = error.message
+      // The email of the user's account used.
+      // const email = error.email
+      // The firebase.auth.AuthCredential type that was used.
+      // const credential = error.credential
+      // ...
+    })
 }
 
-export function githubAuth () {
+export function githubAuth() {
   const provider = new firebase.auth.GithubAuthProvider()
-
   return firebase
     .auth()
     .signInWithPopup(provider)
-    .then(
-      result => {
-        console.log('Auth worked!', result)
-        this.$router.push('/chat')
-      },
-      error => {
-        console.log('Unable to auth', error)
-      }
-    )
+    .then(result => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const token = result.credential.accessToken
+      const user = result.user
+      console.log('Auth worked!', result)
+      this.$router.push('/chat')
+    })
+    .catch(function(error) {
+      // Handle Errors here.
+      console.log('Unable to auth', error)
+      // const errorCode = error.code
+      // const errorMessage = error.message
+      // const email = error.email
+      // const credential = error.credential
+    })
 }
-
-// firebase.auth().fetchProvidersForEmail(error.email)
-//   .then(providers => {
-//     //providers returns this array -> ["google.com"]
-//     // You need to sign in the user to that google account
-//     // with the same email.
-//     // In a browser you can call:
-//     // var provider = new firebase.auth.GoogleAuthProvider();
-//     // provider.setCustomParameters({login_hint: error.email});
-//     // firebase.auth().signInWithPopup(provider)
-//     // If you have your own mechanism to get that token, you get it
-//     // for that Google email user and sign in
-//     firebase.auth().signInWithCredential(googleCred)
-//       .then(user => {
-//         // You can now link the pending credential from the first
-//         // error.
-//         user.linkWithCredential(error.credential)
-//       })
-//       .catch(error => log(error))

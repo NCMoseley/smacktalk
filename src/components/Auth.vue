@@ -14,7 +14,6 @@
         </div>
       </nav>
       <main>
-        
         <router-view></router-view>
       </main>
     </div>
@@ -33,8 +32,8 @@
                   </div>
                   <p class="btn-text" @click="googleAuth()"><b>Sign in with Google</b></p>
                 </div>
-                <button class="loginBtn loginBtn--facebook" @click="facebookAuth()">Login with Facebook</button>
                 <button class="loginBtn loginBtn--GitHub" @click="githubAuth()"> Login with Git Hub, true playa</button>
+                <button class="loginBtn loginBtn--facebook" @click="facebookAuth()">Continue with Facebook</button>
                 
               </div>
             </form>
