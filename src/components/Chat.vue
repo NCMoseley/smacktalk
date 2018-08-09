@@ -182,4 +182,7 @@ button {
 .chat-time {
   font-size: 10px;
 }
+[v-cloak] {
+  display: none;
+}
 </style>

@@ -1,6 +1,10 @@
 <template>
   <div id ="app">
-    <router-view></router-view>
+    <div v-cloak>
+      <div class="v-cloak--hidden">
+        <router-view></router-view>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -11,4 +15,24 @@ export default {
 </script>
 
 <style>
+[v-cloak] .v-cloak--block {
+  display: block;
+}
+[v-cloak] .v-cloak--inline {
+  display: inline;
+}
+[v-cloak] .v-cloak--inlineBlock {
+  display: inline-block;
+}
+[v-cloak] .v-cloak--hidden {
+  display: none;
+}
+[v-cloak] .v-cloak--invisible {
+  visibility: hidden;
+}
+.v-cloak--block,
+.v-cloak--inline,
+.v-cloak--inlineBlock {
+  display: none;
+}
 </style>
