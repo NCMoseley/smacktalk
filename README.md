@@ -4,7 +4,7 @@
 
 > This is our world now
 
-A small project designed to showcase realtime firebase message delivery, and Oauth service for a .Vue App.
+A small Progressive Web App designed to showcase realtime Firebase message delivery, and Oauth service for a .Vue App. Deployed on AWS.
 
 ## Build Setup
 
@@ -37,7 +37,9 @@ https://medium.com/@kels_orien/building-a-pwa-chat-app-with-vue-js-and-firebase-
 
 ## Technology
 
-firebase
+Vue
+AWS
+Firebase
 vuefire
 moment
 dotenv
